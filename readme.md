@@ -2,30 +2,32 @@
 
 **中文科学文献数据集(CSL)**
 
-数据集目前包含 140k 条计算机相关学术论文的标题及摘要信息，更多学术领域的摘要信息正在整理中。
+包括各类 NLP 任务的中文科学文献语料数据，更多数据正在整理中。
 
 ## Files
 
 ```
----------------------------------
-abstract_cs.zip |  140K texts |
----------------------------------
-csl_public.zip  |  26K texts  |
----------------------------------
-TOTAL           |  166K texts |
----------------------------------
+------------------------------------------------
+abstract_cs.zip      |  140K texts | 短文本摘要 |
+------------------------------------------------
+csl_public.zip       |  26K texts  | 关键词识别 |
+------------------------------------------------
+abst_classified.zip  |  31K texts  | 文本分类   |
+------------------------------------------------
+TOTAL                |  197K texts |           |
+------------------------------------------------
 ```
 
 <a href="#download">Download</a> 
 
-### abstract_cs
+TODO：长文本摘要数据集
 
-字段：
-+ title -- 论文标题
-+ content -- 论文摘要
+### abstract_cs
+**计算机领域的论文摘要和标题数据，可用于短文本摘要生成。**
+
 
 ```
-数据量：140183
+数据量：140,183
 示例：
 {
 	{
@@ -60,8 +62,31 @@ TOTAL           |  166K texts |
      "keyword": ["水声学", "FFT", "波束形成", "3维成像声呐"], 
      "label": "1"
 }
-    
-    
+```
+### abst_classified
+选取自然科学相关学报的论文摘要根据[国家自然科学基金](http://www.nsfc.gov.cn/nsfc/cen/xmzn/2019xmzn/15/index.html)进行学科分类。
+```
+数据量：31,489
+示例：
+{
+    {
+        "index": 4492,
+        "abstract": "本实验对某红茶菌中的微生物菌种进行了分离,共得到70个菌株,其中酵母茵15株,醋酸茵30株,乳酸茵25株,经过初步鉴定得到6个茵种.分别为酿酒酵母Saccharomycescerevisiae、粟酒裂殖酵母Schizosaccharomycespombe、醋化醋杆菌木质亚种Acetobacterxylinum、液化醋杆茵A.liquefaciens、甲醇醋杆菌Acidomonasmnethanolica、乳杆菌Lactobacillussp.",
+        "category": "微生物学",
+    },
+    {
+        "index": 31259,
+        "abstract": "根据江苏沿海3市2005-2015年的历史数据,分析了江苏沿海地区金融生态差异和经济增长效率的现状,运用主成分分析法构造金融生态指数,进而构建能够衡量区域金融生态差异的泰尔指数,然后用泰尔指数与人均GDP增长率建立VAR模型,得出连云港和盐城两市金融生态差异与经济增长效率之间不存在格兰杰因果关系、南通市经济增长效率对金融生态差异存在单向影响作用的结论.最后依据实证结论,提出促进江苏沿海地区协调发展的相关建议."	
+        "category": "宏观管理与政策",
+    },
+    {
+        "index": 31285,
+        "abstract": "针对现有的外包计算存在外包计算不公平性、用户和外包者不是匿名的、且用户无法传递外包计算的问题,基于可传递条件模型,构建了一个公平的用户和外包者匿名的可传递外包计算协议.利用Groth-Sahai的承诺和对应证明的可自更新性,新协议保证了用户和外包者的匿名性,且允许用户在不想进行计算时,可以不通过外包者,直接把该计算传递给其他用户,从而增加了外包计算的实用性."	
+        "category": "计算机科学",
+     },
+}
+
+
 ```
 
 ## Example
@@ -108,14 +133,17 @@ TOTAL           |  166K texts |
 
 ## Download
 
-+ 计算机科学领域 140K (abstract_cs.zip) [百度网盘](https://pan.baidu.com/s/1nYM1rMHLNW0o7gGwV_dEiA)  (提取码: s967)
++ 计算机领域短文本摘要 140K (abstract_cs.zip) [百度网盘](https://pan.baidu.com/s/1nYM1rMHLNW0o7gGwV_dEiA)  (提取码: s967)
 + CSL 关键词识别任务 26k (csl_public.zip)    [Google](https://storage.googleapis.com/cluebenchmark/tasks/csl_public.zip) | [百度网盘](https://pan.baidu.com/s/1SuKGTRD3ZwFihn7q0uNgsA) (提取码: sxm5)
-
++ 摘要领域分类 [百度网盘](https://pan.baidu.com/s/17wfl2DbQll81r-qyxK7asw) (提取码: nk9w) 
 ## Reference
 
 [1] 苏剑林. (2018, Sep 01). 《玩转Keras之seq2seq自动生成标题 》[Blog post]. Retrieved from https://spaces.ac.cn/archives/5861
 
 [2] bert4keras https://github.com/bojone/bert4keras
+
+[3] AMiner https://aminer.org/
+
 ## License
 
-本数据集仅供个人研究学习使用，如需其它用途请[联系作者](mailto:liyudong123@hotmai.com)
+本数据集仅供个人研究学习使用，如需其它用途请[联系作者](mailto:liyudong123@hotmai.com) 
