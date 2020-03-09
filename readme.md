@@ -145,9 +145,9 @@ abst_classified.zip 选取自然科学相关学报的论文摘要根据[国家�
 
 ## Download
 
-+ 计算机领域短文本摘要 140K (abstract_cs.zip) [百度网盘](https://pan.baidu.com/s/1nYM1rMHLNW0o7gGwV_dEiA)  (提取码: s967)
-+ CSL 关键词识别任务 26k (csl_public.zip)    [Google](https://storage.googleapis.com/cluebenchmark/tasks/csl_public.zip) | [百度网盘](https://pan.baidu.com/s/1SuKGTRD3ZwFihn7q0uNgsA) (提取码: sxm5)
-+ 摘要领域分类 [百度网盘](https://pan.baidu.com/s/17wfl2DbQll81r-qyxK7asw) (提取码: nk9w) 
++ 计算机领域短文本摘要 140K (abstract_cs.zip) 
++ CSL 关键词识别任务 26k (csl_public.zip)    [Google](https://storage.googleapis.com/cluebenchmark/tasks/csl_public.zip) 
++ 摘要领域分类 
 ## Reference
 
 [1] 苏剑林. (2018, Sep 01). 《玩转Keras之seq2seq自动生成标题 》[Blog post]. Retrieved from https://spaces.ac.cn/archives/5861
@@ -158,4 +158,4 @@ abst_classified.zip 选取自然科学相关学报的论文摘要根据[国家�
 
 ## License
 
-本数据集仅供个人研究学习使用，如需其它用途请[联系作者](mailto:liyudong123@hotmai.com) 
+本数据集仅供个人研究学习使用，如需其它用途请[联系作者](mailto:liyudong123@hotmail.com) 
