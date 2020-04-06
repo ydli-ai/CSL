@@ -145,7 +145,7 @@ abst_classified.zip 选取自然科学相关学报的论文摘要根据[国家�
 
 ## Download
 
-+ 计算机领域短文本摘要 [CLGE](https://github.com/CLUEbenchmark/CLGE#1-csl-%E4%B8%AD%E9%95%BF%E6%96%87%E6%9C%AC%E6%91%98%E8%A6%81%E7%94%9F%E6%88%90)一键运行即可自动下载数据集
++ 计算机领域短文本摘要 *（[CLGE](https://github.com/CLUEbenchmark/CLGE#1-csl-%E4%B8%AD%E9%95%BF%E6%96%87%E6%9C%AC%E6%91%98%E8%A6%81%E7%94%9F%E6%88%90) 一键运行即可自动下载数据集）*
 + CSL 关键词识别任务 26k (csl_public.zip)    [Google](https://storage.googleapis.com/cluebenchmark/tasks/csl_public.zip) 
 + 摘要领域分类 
 ## Reference
