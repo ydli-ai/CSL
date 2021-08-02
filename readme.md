@@ -3,7 +3,11 @@
 **中文科学文献数据集(CSL)**
 
 包括各类 NLP 任务的中文科学文献语料数据。
-预计于2021年7月公开完整数据集。
+预计于2021年年底公开完整数据集。
+
+现有的公开任务数据可以参考：
+1. https://github.com/CLUEbenchmark/CLGE#1-csl-中长文本摘要生成
+2. https://github.com/CLUEbenchmark/FewCLUE#2-csldcp--中文科学文献学科分类数据集
 
 ## Files
 
