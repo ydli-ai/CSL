@@ -23,7 +23,7 @@ We obtain the paper's meta-information from the
 [National Engineering Research Center for Science and Technology Resources Sharing Service (NSTR)](https://nstr.escience.net.cn) dated from 2010 to 2020.
 Then, we filter data by the Catalogue of Chinese Core Journals.
 According to the Catalogue and collected data, we divide academic fields into 13 first-level categories (e.g., Engineering, Science) and 67 second-level disciplines (e.g., Mechanics, Mathematics).
-In total, we collect 396,209 instances for the CSL dataset, represented as tuples $<T,A,K,c,d>$, where $T$ is the title, $A$ is the abstract, $K$ is a list of keywords, $c$ is the category label and $d$ is the discipline label.
+In total, we collect 396,209 instances for the CSL dataset, represented as tuples <T, A, K, c, d>, where *T* is the title, *A* is the abstract, *K* is a list of keywords, *c* is the category label and *d* is the discipline label.
 The paper distribution over categories and the examples of disciplines are shown in below:
 
 
