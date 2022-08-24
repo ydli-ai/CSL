@@ -5,22 +5,27 @@
 **CSL: A Large-scale Chinese Scientific Literature Dataset**  
 *Yudong Li, Yuqing Zhang, Zhe Zhao, Linlin Shen, Weijie Liu, Weiquan Mao and Hui Zhang*
 
-[English Documentation](./readme_en.md) | [Paper]() | [BibTex]()  
+[Paper]() | [BibTex]()
 
-**tl; dr** 提供首个中文科学文献数据集（CSL），包含 396,209 篇中文核心期刊论文元信息
-（标题、摘要、关键词、学科、门类）。CSL 数据集可以作为预训练语料，也可以构建许多NLP任务，例如文本摘要（标题预测）、
-关键词生成和文本分类等。
+**tl; dr** In this work, we present CSL, a large-scale **C**hinese **S**cientific **L**iterature dataset,
+which contains the titles, abstracts, keywords and academic fields of 396,209 papers. 
+To our knowledge, CSL is the first scientific document dataset in Chinese.
+The CSL can serve as a Chinese corpus.
+Also, this semi-structured data is a natural annotation that can constitute many supervised NLP tasks
+(e.g., summarization, keyword generation and text classification).
 
-###  数据集、基准测评和论文将于*2022年9月15日*在本项目公开。
 
 ![avatar](./assets/csl_land.jpg)
 
-## 数据集
+## Dataset
 
-CSL 数据获取自 [国家科技资源共享服务工程技术研究中心](https://nstr.escience.net.cn/)，
-包含 2010-2020 年发表的期刊论文元信息（标题、摘要和关键词）。根据中文核心期刊目录进行筛选，
-并标注学科和门类标签，分为 13 个门类（一级标签）和 67 个学科（二级标签）。
-数据总量为 396,209 条，分布如下表所示：
+We obtain the paper's meta-information from the 
+[National Engineering Research Center for Science and Technology Resources Sharing Service (NSTR)](https://nstr.escience.net.cn) dated from 2010 to 2020.
+Then, we filter data by the Catalogue of Chinese Core Journals.
+According to the Catalogue and collected data, we divide academic fields into 13 first-level categories (e.g., Engineering, Science) and 67 second-level disciplines (e.g., Mechanics, Mathematics).
+In total, we collect 396,209 instances for the CSL dataset, represented as tuples $<T,A,K,c,d>$, where $T$ is the title, $A$ is the abstract, $K$ is a list of keywords, $c$ is the category label and $d$ is the discipline label.
+The paper distribution over categories and the examples of disciplines are shown in below:
+
 
 |  Category       |          \#d | len(T) | len(A) | num(K) | \#Samples | Discipline Examples                                   |
 |-----------------|-------------:|-------:|-------:|-------:|----------:|---------------------------------------|
@@ -39,19 +44,20 @@ CSL 数据获取自 [国家科技资源共享服务工程技术研究中心](htt
 |  Philosophy     |            1 |   18.0 |  176.5 |    8.0 |     7,511 |  Philosophy                                    |
 |  All            |           67 |        |        |        |   396,209 |                                                |
 
-## 测评任务
+## Evaluation Tasks
 
-为了推动中文科学文献 NLP 研究，本项目提供一系列测评基准任务。
-测评任务数据集从 CSL 中抽样 10,000 条，按照 0.8 : 0.1 : 0.1的比例划分训练、验证和测试集。
-为了提供公平的多任务学习设置，各任务使用相同的训练、验证和测试集。
-任务数据集以 text2text 的形式提供，可以直接在基线模型（例如 T5）上进行多任务训练。
+We build a benchmark to facilitate the development of Chinese scientific literature NLP.
+It contains diverse tasks, ranging from classification to text generation, representing many practical scenarios.
+We randomly select 100k samples and split the datasets into the training set, validation set and test set according to the ratio, 0.8 : 0.1 : 0.1.
+This split is shared across different tasks, which allows multitask training and evaluation.
+Datasets are presented in text2text format.
 
 
-#### 1.文本摘要（标题预测）
+#### 1.Text Summarization (Title Prediction)
 
-输入论文的摘要，预测该论文的标题。
+Predict the paper title from the abstract.
 
-数据示例：
+Data examples:
 ```
 { 
   "prompt": "to title",
@@ -62,11 +68,11 @@ CSL 数据获取自 [国家科技资源共享服务工程技术研究中心](htt
 }
 ```
 
-#### 2.关键词生成
+#### 2.Keyword Generation
 
-输入论文的摘要和标题，预测该论文的关键词。
+Predict a list of keywords from a given paper title and abstract.
 
-数据示例：
+Data examples:
 ```
 { 
   "prompt": "to keywords",
@@ -78,11 +84,11 @@ CSL 数据获取自 [国家科技资源共享服务工程技术研究中心](htt
 }
 ```
 
-#### 3.论文门类分类
+#### 3.Category Classification
 
-输入论文的标题，预测该论文所属的门类（13分类）。
+Predict the category with the paper title (13 classes).
 
-数据示例：
+Data examples:
 ```
 { 
   "prompt": "to category",
@@ -96,11 +102,11 @@ CSL 数据获取自 [国家科技资源共享服务工程技术研究中心](htt
 }
 ```
 
-#### 4.论文学科分类
+#### 4.Discipline Classification
 
-输入论文的摘要，预测该论文所属的学科（67分类）。
+Predict the discipline with the paper abstract (67 classes).
 
-数据示例：
+Data examples:
 ```
 { 
   "prompt": "to discipline",
@@ -118,13 +124,13 @@ CSL 数据获取自 [国家科技资源共享服务工程技术研究中心](htt
 }
 ```
 
-## 代码与基线模型
+## Code and Baselines
 
-实验在 UER-py 上测试了三个 text2text 基线模型（[T5](https://github.com/dbiir/UER-py/wiki/%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E4%BB%93%E5%BA%93#%E4%B8%AD%E6%96%87t5%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B)、
-[BART](https://github.com/dbiir/UER-py/wiki/%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E4%BB%93%E5%BA%93#%E4%B8%AD%E6%96%87bart%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B) 
-和 [Pegasus](https://github.com/dbiir/UER-py/wiki/%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E4%BB%93%E5%BA%93#%E4%B8%AD%E6%96%87pegasus%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B)）。
-
-1. 克隆项目，下载预训练模型并放入 `UER-py/models/`
+Experiments are conducted on three popular text2text models ([T5](https://github.com/dbiir/UER-py/wiki/Modelzoo#chinese-t5-pre-trained-weights),
+[BART](https://github.com/dbiir/UER-py/wiki/Modelzoo#bart-pre-trained-weights) 
+and [Pegasus](https://github.com/dbiir/UER-py/wiki/Modelzoo#pegasus-pre-trained-weights))
+based on UER-py framework.
+1. Clone the project, download the pre-trained models to `UER-py/models/`
 
 ```
 git clone https://github.com/ydli-ai/CSL.git
@@ -133,7 +139,7 @@ git clone https://github.com/dbiir/UER-py.git
 cp CSL/run_text2text_csl.py UER-py/finetune/
 ```
 
-2. 准备数据，单任务微调（以标题预测为例）
+2. Prepare data, fine-tune on single task (summarization as example)
 ```
 cp -r CSL/benchmark/ UER-py/datasets/
 
@@ -153,7 +159,7 @@ python3 finetune/run_text2text_csl.py --pretrained_model_path models/t5_base.bin
 
 ## Shout-outs
 
-CSL 已经被用于一些测评任务：
+CSL has been used by:
 
 1. CLUE Benchmark 中文语言理解测评基准 - [CSL 关键词识别 Keyword Recognition](https://github.com/CLUEbenchmark/CLUE#csl-%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%86%E5%88%AB--keyword-recognition-accuracy)
 
