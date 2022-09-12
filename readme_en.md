@@ -157,6 +157,37 @@ python3 finetune/run_text2text_csl.py --pretrained_model_path models/t5_base.bin
 ```
 
 
+## Download
+
+
+|                  | Samples |                                                                            Access |
+|------------------|--------:|----------------------------------------------------------------------------------:|
+| CSL Benchmark    |     10k |                                                                        in project |
+| CSL Sub-dataset  |     40k | [Google Drive](https://drive.google.com/file/d/1ve7ufyvf7ZtFygucgRrw-cKC2pqPlWZT) |
+| CSL Full-dataset |    396k |                                                                  mail application |
+
+
+This database is publicly available for research purposes. 
+Permission to **non-commercial** use but not reproduce or distribute the CSL dataset.
+
+Send an e-mail to [Yudong Li](mailto:liyudong123@hotmail.com) before downloading the full-dataset.
+Your Email MUST be set from a valid university (or research institution) account and MUST include the following text:
+
+```
+Subject: Application to download the CSL Full-dataset       
+Name: <your first and last name>
+Affiliation: <University where you work>
+Department: <your department>
+Position: <your job title>
+Email: <must be the email at the above mentioned institution>
+
+I have read and agree to the terms and conditions specified in the CSL dataset webpage.
+This dataset will only be used for research purposes.
+I will not make any part of this dataset available to a third party.
+I'll not sell any part of this dataset or make any profit from its use.
+
+```
+
 ## Shout-outs
 
 CSL has been used by:

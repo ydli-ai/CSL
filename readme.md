@@ -151,6 +151,36 @@ python3 finetune/run_text2text_csl.py --pretrained_model_path models/t5_base.bin
 ```
 
 
+## 下载
+
+
+|                  | Samples |                                                                            Access |
+|------------------|--------:|----------------------------------------------------------------------------------:|
+| CSL Benchmark    |     10k |                                                                        in project |
+| CSL Sub-dataset  |     40k | [Google Drive](https://drive.google.com/file/d/1ve7ufyvf7ZtFygucgRrw-cKC2pqPlWZT) |
+| CSL Full-dataset |    396k |                                                                  mail application |
+
+CSL 数据集向科研用途公开，使用者许同意用途仅限**非商用目的**学术研究，并且同意不复制或分发 CSL 数据集。
+
+获取完整数据集请以以下模版向 [Yudong Li](mailto:liyudong123@hotmail.com) 发送申请，发件邮箱**必须**是有效的大学（或科研机构）邮箱。
+
+```
+Subject: Application to download the CSL Full-dataset       
+Name: <your first and last name>
+Affiliation: <University where you work>
+Department: <your department>
+Position: <your job title>
+Email: <must be the email at the above mentioned institution>
+
+I have read and agree to the terms and conditions specified in the CSL dataset webpage.
+This dataset will only be used for research purposes.
+I will not make any part of this dataset available to a third party.
+I'll not sell any part of this dataset or make any profit from its use.
+
+我已阅读并同意 CSL 的使用协议: 本数据集只会用于科研用途; 我不会将数据提供给第三方或者销售以获利。
+```
+
+
 ## Shout-outs
 
 CSL 已经被用于一些测评任务：
