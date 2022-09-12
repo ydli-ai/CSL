@@ -177,7 +177,7 @@ This dataset will only be used for research purposes.
 I will not make any part of this dataset available to a third party.
 I'll not sell any part of this dataset or make any profit from its use.
 
-我已阅读并同意 CSL 的使用协议: 本数据集只会用于科研用途; 我不会将数据提供给第三方或者销售以获利。
+我已阅读并同意 CSL 的使用协议: 本数据集只会被用于科研用途; 我不会将数据提供给第三方或者出售以获利。
 ```
 
 
