@@ -5,7 +5,7 @@
 **CSL: A Large-scale Chinese Scientific Literature Dataset**  
 *Yudong Li, Yuqing Zhang, Zhe Zhao, Linlin Shen, Weijie Liu, Weiquan Mao and Hui Zhang*
 
-[Paper]() | [BibTex]()
+[Paper](https://arxiv.org/abs/2209.05034) | [BibTex]()
 
 **tl; dr** In this work, we present CSL, a large-scale **C**hinese **S**cientific **L**iterature dataset,
 which contains the titles, abstracts, keywords and academic fields of 396,209 papers. 

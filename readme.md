@@ -5,13 +5,12 @@
 **CSL: A Large-scale Chinese Scientific Literature Dataset**  
 *Yudong Li, Yuqing Zhang, Zhe Zhao, Linlin Shen, Weijie Liu, Weiquan Mao and Hui Zhang*
 
-[English Documentation](./readme_en.md) | [Paper]() | [BibTex]()  
+[English Documentation](./readme_en.md) | [Paper](https://arxiv.org/abs/2209.05034) | [BibTex]()  
 
 **tl; dr** 提供首个中文科学文献数据集（CSL），包含 396,209 篇中文核心期刊论文元信息
 （标题、摘要、关键词、学科、门类）。CSL 数据集可以作为预训练语料，也可以构建许多NLP任务，例如文本摘要（标题预测）、
 关键词生成和文本分类等。
 
-### CSL 论文预计将于*2022年9月15日*在本项目公开。
 
 ![avatar](./assets/csl_land.jpg)
 
