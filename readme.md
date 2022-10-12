@@ -175,11 +175,22 @@ CSL 已经被用于一些测评任务：
 ## BibTeX
 
 ```
-@inproceedings{li2022csl,
-  title={CSL: A Large-scale Chinese Scientific Literature Dataset},
-  author={Yudong Li and Yuqing Zhang and Zhe Zhao and Linlin Shen and Weijie Liu and Weiquan Mao and Hui Zhang},
-  journal={arXiv preprint arXiv:2209.05034},
-  year={2022}
+@inproceedings{li-etal-2022-csl,
+    title = "{CSL}: A Large-scale {C}hinese Scientific Literature Dataset",
+    author = "Li, Yudong  and
+      Zhang, Yuqing  and
+      Zhao, Zhe  and
+      Shen, Linlin  and
+      Liu, Weijie  and
+      Mao, Weiquan  and
+      Zhang, Hui",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.344",
+    pages = "3917--3923",
 }
 ```
 
