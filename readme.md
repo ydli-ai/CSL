@@ -170,6 +170,8 @@ CSL 已经被用于一些测评任务：
 
 3. bert4keras - [论文标题生成](https://github.com/bojone/bert4keras/tree/master/examples#%E7%AE%80%E4%BB%8B)
 
+4. [千言数据集](https://www.luge.ai/#/luge/dataDetail?id=58)
+
 ## BibTeX
 
 ```
