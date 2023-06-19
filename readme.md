@@ -152,12 +152,29 @@ python3 finetune/run_text2text_csl.py --pretrained_model_path models/t5_base.bin
 
 ## 下载
 
+### CSL 原始数据
 
 |                  | Samples |                                                                            Access |
 |------------------|--------:|----------------------------------------------------------------------------------:|
 | CSL Benchmark    |     10k |                                                                        in project |
 | CSL Sub-dataset  |     40k | [Google Drive](https://drive.google.com/file/d/1ve7ufyvf7ZtFygucgRrw-cKC2pqPlWZT) |
 | CSL Full-dataset |    396k | [Google Drive](https://drive.google.com/file/d/1xEDgtqHU4qm0Sp-dKjc5KerAmWydmh3-/view?usp=sharing) |
+
+
+### CSL 指令数据 & 预训练语料
+
+1. 指令数据: 设计了 16 种 instructions 包含文本生成、关键词提取、文本摘要和文本分类等任务。
+
+[下载地址](https://huggingface.co/datasets/P01son/instructions/tree/main/CSL)
+
+数据示例：
+```
+{"instruction": "根据标题判断论文所属的学科：", "input": "改进中药材生产和流通模式探讨", "output": "药学"}
+{"instruction": "这篇论文的关键词是？\n", "input": "通过将液固接触角沿轴向呈阶梯状分布的功能表面引入到三角形微型热管的一维稳态模型之中,分析了其对微型热管换热性能的影响.模拟结果表明较之常规表面,基于功能表面的微型热管能带走更多的热量.而产生这种结果的原因主要是由于功能表面能有效地提高微型热管内的毛细压差且不会造成摩擦阻力的明显变化.另外,对于传统表面还发现存在着最优接触角,此时微型热管的换热性能最佳,偏离该接触角会造成毛细压差的减小和热管换热性能的下降.\n", "output": "微型热管,功能表面,毛细力,剪切力"}
+```
+2. 预训练语料: 1.5G 论文摘要数据，可用于无监督预训练。
+
+[下载地址](https://huggingface.co/datasets/Linly-AI/Chinese-pretraining-dataset/blob/main/csl.jsonl)
 
 
 ## Shout-outs
